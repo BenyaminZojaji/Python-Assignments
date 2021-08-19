@@ -24,7 +24,7 @@ def translater(FROM, TO):
     translationList=[]
     for letter in sentenceList:
         dotFlag = False
-        if letter.find('.')!=-1:
+        if letter.find('.')!=-1 and letter.find('.')==len(letter)-1:
             letter = letter[:letter.find('.')]
             dotFlag = True
         tmp = letter
