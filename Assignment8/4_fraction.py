@@ -1,3 +1,4 @@
+import re
 def sum(x, y):
     result = {}
     result['s'] = x['s'] * y['m'] + x['m'] * y['s']
@@ -22,8 +23,8 @@ def show(x):
     return str(x['s'])+'/'+str(x['m'])
 a = {}
 b = {}
-a['s']= int(input('a numered: '))
-a['m']= int(input('a denumered: '))
-b['s']= int(input('b numered: '))
-b['m']= int(input('b denumered: '))
+aList= list(map(int, re.sub(r'^(\d+)/(\d+)', '\g<1>\g<2>', input('give me fraction1: e.g. 3/5\n'))))
+bList= list(map(int, re.sub(r'^(\d+)/(\d+)', '\g<1>\g<2>', input('give me fraction2: e.g. 3/5\n'))))
+a = {'s':aList[0],'m':aList[1]}
+b = {'s':bList[0],'m':bList[1]}
 print('sum: %s\tsub: %s\tmul: %s\tdiv: %s'%(show(sum(a, b)), show(sub(a, b)), show(mul(a, b)), show(div(a, b))))
