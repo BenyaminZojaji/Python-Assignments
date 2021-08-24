@@ -1,3 +1,4 @@
+import re
 def sum(x, y):
     result = {}
     result['r']=x['r']+y['r']
@@ -15,7 +16,8 @@ def mul(x, y):
     return result   
 def show(x):
     return str(x['r'])+'+('+str(x['i'])+')i'
-
-c1 = {'r':5, 'i':3}
-c2 = {'r':7, 'i':1}
+c1list = list(map(int, re.sub(r'^(\d+)[\+ \-](\d+)i$', '\g<1>\g<2>', input('complex number1: e.g. 2+3i\n'))))
+c2list = list(map(int, re.sub(r'^(\d+)[\+ \-](\d+)i$', '\g<1>\g<2>', input('complex number2: e.g. 2+3i\n'))))
+c1 = {'r':c1list[0], 'i':c1list[1]}
+c2 = {'r':c2list[0], 'i':c2list[1]}
 print('sum: %s\tsub: %s\tmul: %s'%(show(sum(c1, c2)), show(sub(c1, c2)), show(mul(c1, c2))))
