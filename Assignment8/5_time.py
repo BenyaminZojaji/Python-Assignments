@@ -9,6 +9,8 @@ def sum(x, y):
     if result['m'] >=60:
         result['m']-=60
         result['h']+=1
+    if result['h']>23:
+        result['h']-=24
     return result
 def sub(x, y):
     result = {}
@@ -32,6 +34,9 @@ def secToTime(x):
     return result
 def show(x):
     return str(x['h'])+':'+str(x['m'])+':'+str(x['s'])
-t1 = {'h':2, 'm':30, 's':45}
-t2 = {'h':3, 'm':17, 's':40}
-print('sum: %s\tsub: %s\ttimeToSec: %s\tsecToTime: %s'%(show(sum(t1, t2)), show(sub(t1, t2)), timeToSec(t1), show(secToTime(2000))))
+t1list = list(map(int, input('time1: e.g. 2:16:18\n').split(':')))
+t2list = list(map(int, input('time2: e.g. 2:16:18\n').split(':')))
+sec = int(input('give me sec convert to time: '))
+t1 = {'h':t1list[0], 'm':t1list[1], 's':t1list[2]}
+t2 = {'h':t2list[0], 'm':t2list[1], 's':t2list[2]}
+print('sum: %s\tsub: %s\ttimeToSec: %s\tsecToTime: %s'%(show(sum(t1, t2)), show(sub(t1, t2)), timeToSec(t1), show(secToTime(sec))))
