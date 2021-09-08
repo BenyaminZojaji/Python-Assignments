@@ -20,7 +20,7 @@ class Main:
         print('Data loaded!')
         self.menu()
     def menu(self):
-        choose = input('1- Add\n2- Edit\n3- Delete\n4- show all medias \n5- Search by name\n6- search by duration\n7- QrCode\n8- save changes and Exit\n')
+        choose = input('1- Add\n2- Edit\n3- Delete\n4- show all medias\n5- Download\n6- Search by name\n7- search by duration\n8- QrCode\n9- save changes and Exit\n')
         if choose=='1':
             self.add()
         elif choose=='2':
@@ -30,12 +30,14 @@ class Main:
         elif choose=='4':
             self.showAllMedias()
         elif choose=='5':
-            self.searchWithName()
+            self.download()
         elif choose=='6':
-            self.searchWithDuration()
+            self.searchWithName()
         elif choose=='7':
-            self.qrcode()
+            self.searchWithDuration()
         elif choose=='8':
+            self.qrcode()
+        elif choose=='9':
             self.saveExit()
     def add(self):
         data = []
@@ -85,6 +87,15 @@ class Main:
     def showAllMedias(self):
         for piece in self.totalMedia:
             piece.showInfo()
+        self.menu()
+    def download(self):
+        NAME = input('name: ')
+        for data in self.totalMedia:
+            if data.name == NAME:
+                data.download()
+                print('Downloaded.')
+                self.menu()
+        print('There is no media with that name.')
         self.menu()
     def searchWithName(self):
         NAME = input('name: ')
