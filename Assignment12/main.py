@@ -2,9 +2,7 @@ import math
 import random
 import time
 import arcade
-
 DEFAULT_FONT_SIZE = 40
-
 class Enemy(arcade.Sprite):
     def __init__(self, w, h, s=3):
         super().__init__(':resources:images/space_shooter/playerShip3_orange.png')
@@ -31,7 +29,6 @@ class Bullet(arcade.Sprite):
         angle_rad = math.radians(self.angle)
         self.center_x -= self.speed * math.sin(angle_rad)
         self.center_y += self.speed * math.cos(angle_rad)
-
 class Spacecraft(arcade.Sprite):
     def __init__(self, w, h):
         super().__init__(':resources:images/space_shooter/playerShip1_green.png')
@@ -63,6 +60,7 @@ class Game(arcade.Window):
         self.background_image = arcade.load_texture(':resources:images/backgrounds/stars.png')
         self.me = Spacecraft(self.w, self.h)
         self.enemy = Enemy(self.w, self.h)
+        self.next_enemy_time = random.randint(2, 5)
         self.enemy_list = []
         self.game_start_time = time.time()
         self.start_time = time.time()
@@ -83,7 +81,8 @@ class Game(arcade.Window):
             arcade.draw_text('Score: %i'%self.me.score, self.w-130, 10, arcade.color.WHITE, DEFAULT_FONT_SIZE //2, width=200, align='left')
     def on_update(self, delta_time):
         self.end_time = time.time()
-        if self.end_time - self.start_time > random.randint(2, 6):
+        if self.end_time - self.start_time > self.next_enemy_time:
+            self.next_enemy_time = random.randint(2, 6)
             self.enemy_list.append(Enemy(self.w, self.h, 3+(self.end_time-self.game_start_time)//24))
             self.start_time = time.time()
         self.me.rotate()
