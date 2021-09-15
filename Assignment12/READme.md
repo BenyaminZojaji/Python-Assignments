@@ -8,5 +8,6 @@
   - [x] show Game over when user lose all their health.
   - [x] play sound when shooting.
   - [x] play sound when enemy spacecraft explode.
+  - [x] spacecraft can move in x and y and change angle.
 - space craft view 
   - ![Silver Spacecraft](https://user-images.githubusercontent.com/77120507/133397753-32b502ed-78c4-45ac-bb44-f09c2597d0e5.png)
