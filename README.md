@@ -28,3 +28,16 @@
   - [x] play sound when enemy spacecraft explode.
 - space craft view 
   - ![Silver Spacecraft](https://user-images.githubusercontent.com/77120507/133397753-32b502ed-78c4-45ac-bb44-f09c2597d0e5.png)
+## Assignment 13
+## Assignment 14
+- **T-rex runner**
+  - [x] Jump over cacti
+  - [x] Bending in the face of birds
+  - [x] jump sound
+  - [x] Day and Night mode
+  - [x] Speed up the game over time
+  - [x] The current score is displayed next to the highest score
+- Trex view 1
+  - ![Screenshot (486)](https://user-images.githubusercontent.com/77120507/134362351-3ae93ba5-b88b-4003-a292-37731621bb30.png)
+- Trex view 2
+  - ![Screenshot (492)](https://user-images.githubusercontent.com/77120507/134362477-bf5d6f8c-c886-4c80-9d0e-2e5e80f1b5d1.png)
