@@ -41,3 +41,13 @@
   - ![Screenshot (486)](https://user-images.githubusercontent.com/77120507/134362351-3ae93ba5-b88b-4003-a292-37731621bb30.png)
 - Trex view 2
   - ![Screenshot (492)](https://user-images.githubusercontent.com/77120507/134362477-bf5d6f8c-c886-4c80-9d0e-2e5e80f1b5d1.png)
+## Assignment 15
+## Assignment 16
+- **Calculator**
+- Simple GUI calculator in **Python** using **pyqt6**
+- feautures:
+  - [x] +  -  *  /
+  - [x] sin, cos, tan, cot
+  - [x] log, sqrt
+- view:
+  - ![calculator view](https://user-images.githubusercontent.com/77120507/135714897-cba6ec69-a3e1-4105-aee2-5ee9d70dc8c9.png)
