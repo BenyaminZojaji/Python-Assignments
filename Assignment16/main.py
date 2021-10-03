@@ -1,4 +1,5 @@
 from math import *
+from functools import partial
 from sympy import cot
 from PySide6.QtWidgets import *
 from PySide6.QtUiTools import *
@@ -14,16 +15,16 @@ class Window(QMainWindow):
         self.lastOperand = ''
         self.step = 0
 
-        self.ui.btn_0.clicked.connect(self.func_num0)
-        self.ui.btn_1.clicked.connect(self.func_num1)
-        self.ui.btn_2.clicked.connect(self.func_num2)
-        self.ui.btn_3.clicked.connect(self.func_num3)
-        self.ui.btn_4.clicked.connect(self.func_num4)
-        self.ui.btn_5.clicked.connect(self.func_num5)
-        self.ui.btn_6.clicked.connect(self.func_num6)
-        self.ui.btn_7.clicked.connect(self.func_num7)
-        self.ui.btn_8.clicked.connect(self.func_num8)
-        self.ui.btn_9.clicked.connect(self.func_num9)
+        self.ui.btn_0.clicked.connect(partial(self.func_num, 0))
+        self.ui.btn_1.clicked.connect(partial(self.func_num, 1))
+        self.ui.btn_2.clicked.connect(partial(self.func_num, 2))
+        self.ui.btn_3.clicked.connect(partial(self.func_num, 3))
+        self.ui.btn_4.clicked.connect(partial(self.func_num, 4))
+        self.ui.btn_5.clicked.connect(partial(self.func_num, 5))
+        self.ui.btn_6.clicked.connect(partial(self.func_num, 6))
+        self.ui.btn_7.clicked.connect(partial(self.func_num, 7))
+        self.ui.btn_8.clicked.connect(partial(self.func_num, 8))
+        self.ui.btn_9.clicked.connect(partial(self.func_num, 9))
 
         self.ui.sum_btn.clicked.connect(self.sum)
         self.ui.sub_btn.clicked.connect(self.sub)
@@ -41,26 +42,8 @@ class Window(QMainWindow):
         self.ui.log_btn.clicked.connect(self.log_func)
         self.ui.sqrt_btn.clicked.connect(self.sqrt_func)
 
-    def func_num0(self):
-        self.ui.textBox.setText(self.ui.textBox.text() + '0')
-    def func_num1(self):
-        self.ui.textBox.setText(self.ui.textBox.text() + '1')
-    def func_num2(self):
-        self.ui.textBox.setText(self.ui.textBox.text() + '2')
-    def func_num3(self):
-        self.ui.textBox.setText(self.ui.textBox.text() + '3')
-    def func_num4(self):
-        self.ui.textBox.setText(self.ui.textBox.text() + '4')
-    def func_num5(self):
-        self.ui.textBox.setText(self.ui.textBox.text() + '5')
-    def func_num6(self):
-        self.ui.textBox.setText(self.ui.textBox.text() + '6')
-    def func_num7(self):
-        self.ui.textBox.setText(self.ui.textBox.text() + '7')
-    def func_num8(self):
-        self.ui.textBox.setText(self.ui.textBox.text() + '8')
-    def func_num9(self):
-        self.ui.textBox.setText(self.ui.textBox.text() + '9')
+    def func_num(self, num):
+        self.ui.textBox.setText(self.ui.textBox.text() + str(num))
     
     def dot_func(self):
         if '.' not in self.ui.textBox.text():
