@@ -1,5 +1,5 @@
 ## Calculator
-- Simple GUI calculator in **Python** using **pyqt6**
+- Simple GUI calculator in **Python** using **PySide6**
 - feautures:
   - [x] +  -  *  /
   - [x] sin, cos, tan, cot
