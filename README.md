@@ -59,7 +59,7 @@
   - ![guessTheNumber](https://user-images.githubusercontent.com/77120507/136650010-5bcb6f2e-d9ab-42f9-8f6c-90eebf441af6.png)
 #### Password Generator
 - Password Generator app written in **Python** using **PySide6**.
-- - features:
+- features:
   - [x] Three modes for generating passwords. weak, normal and unbreakable
 - view:
   - ![passwordGenerator](https://user-images.githubusercontent.com/77120507/136650056-ff51b41d-9b22-4e60-98ab-54688f80f575.png)
