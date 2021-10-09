@@ -1,5 +1,5 @@
 ## Tik Tok Toe
-- Tik Tok Toe game in **Python** using PySide6.
+- Tik Tok Toe game written in **Python** using PySide6.
 - features:
   - [x] Single player(with AI) and two player
   - [x] Scoreboard
