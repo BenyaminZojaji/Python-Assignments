@@ -5,6 +5,7 @@
   - [x] dark mode on/off
   - [x] text align
   - [x] error handling when data missing
+  - [x] make main numbers read-only
   - [x] win check
 - views:
   - ![sudoku1](https://user-images.githubusercontent.com/77120507/137157822-c7e2eec3-73a4-450a-b089-4bba6aeb0785.png)
