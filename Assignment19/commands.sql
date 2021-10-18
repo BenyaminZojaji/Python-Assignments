@@ -18,5 +18,5 @@ DELETE FROM Customers WHERE country!='IR'
 
 --Update price of all goods
 UPDATE Products
-SET price = price + (price*20/100)
+SET price = price*80/100
 WHERE count!=0
