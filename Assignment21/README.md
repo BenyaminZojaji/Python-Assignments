@@ -24,7 +24,7 @@
 - view:
   - ![result_6](https://user-images.githubusercontent.com/77120507/139590566-7a676885-cb49-43a3-89d1-fa3d02c9386a.png)
 ## Letter B
-- Design letter B using **numpy** and **open-cv**.
+- Design letter-B using **numpy** and **open-cv**.
 - view:
   - ![result_7](https://user-images.githubusercontent.com/77120507/139590558-05787f52-7c96-4669-ad1a-4a1050380378.png)
 
