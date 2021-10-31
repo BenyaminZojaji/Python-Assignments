@@ -19,3 +19,12 @@
 - Create a black line in top left corner.(without opencv built-in methods)
 - view:
   - ![result_5](https://user-images.githubusercontent.com/77120507/139429884-e7c9eb8a-a124-4232-ab79-b4e3a5f42468.png)
+## Gradient
+- Create an image with whito-black gradient using **open-cv** and **numpy**.
+- view:!
+  - [result_6](https://user-images.githubusercontent.com/77120507/139590566-7a676885-cb49-43a3-89d1-fa3d02c9386a.png)
+## Letter B
+- Design letter B using **numpy** and **open-cv**.
+- view:
+  - ![result_7](https://user-images.githubusercontent.com/77120507/139590558-05787f52-7c96-4669-ad1a-4a1050380378.png)
+
